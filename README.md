@@ -1,43 +1,59 @@
-# mental-health-data-analysis
-Source: Anonymous Survey
+Student Mental Health & Stress Analysis
+This project analyzes mental health, treatment, and stress factors among survey respondents. The data is loaded from an Excel dataset and visualized using Python libraries.
 
-File: Dataset.xlsx
+📌 Dataset
+Source: Survey data collected in Excel format
 
-The dataset contains information about:
+File: Dataset.xlsx (sheet: Form Responses 1)
 
-Gender of respondents
+The dataset contains:
 
-Age group
+Demographic info (Gender, Age)
 
-Mental health diagnosis (yes/no)
+Mental health diagnosis and treatment history
 
-Whether they received treatment
+Multiple stress-related questions with numeric ratings
 
-Stress-related responses (on a scale of 1–5)
+🧹 Data Cleaning & Preparation
+Column names cleaned for uniformity (lowercase, underscores, special chars removed)
 
-Lifestyle factors like screen time, sleep, etc.
+Key columns renamed for clarity:
 
-📋 Tasks Performed
-Data Loading & Cleaning using pandas
+mental_health_diagnosis
 
-Read Excel file with openpyxl
+treatment
 
-Removed or renamed columns for clarity
+Timestamp column dropped (if present)
 
-Standardized values (e.g., gender field)
+Stress question columns renamed systematically (stress_1, stress_2, …)
 
-Basic Transformations
+String columns trimmed and normalized (e.g., gender title case)
 
-Cleaned column names (lowercase, underscores)
+📈 Visualizations
+Gender distribution — count plot showing respondent gender breakdown
 
-Mapped categorical values for readability
+Mental health diagnosis vs. treatment — count plot grouped by treatment status
 
-Filtered required columns for analysis
+Average stress levels — bar chart showing mean stress score per stress factor
 
-Visualizations using seaborn & matplotlib:
+All plots use seaborn with a clean whitegrid style and are sized for clarity.
 
-Gender Distribution Bar Plot
+🚀 How to Run
+Upload the Excel file (Dataset.xlsx) to your working directory or Google Colab
 
-Diagnosis vs. Treatment Grouped Bar Chart
+Run the provided Python script or notebook cells sequentially
 
-Average Stress Level per Factor Bar Chart
+Visualizations will render inline (in Jupyter/Colab) or in pop-up windows (locally)
+
+🛠️ Tools Used
+Python 3
+
+pandas (data manipulation)
+
+matplotlib, seaborn (visualizations)
+
+Jupyter Notebook / Google Colab (interactive environment)
+
+Author: Yashaswini M
+Date: June 2025
+Environment: Google Colab recommended for ease of file upload and visualization
